@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Configuración de la base de datos
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Definición del modelo de usuarios
+model Usuario {
+  id                Int                  @id @default(autoincrement())
+  nombre            String
+  rol               String
+  username          String               @unique
+  password          String
+  historialConversiones HistorialConversion[]
+}
+
+// Definición del modelo de historial de conversiones
+model HistorialConversion {
+  id                  Int      @id @default(autoincrement())
+  fechaHoraActividad DateTime @default(now())
+  usuario             Usuario  @relation(fields: [usuarioId], references: [id])
+  usuarioId           Int
+  montoOrigen         Int
+  fechaConversion     DateTime
+  valorMoneda         Float
+  montoConversion     Float
+}

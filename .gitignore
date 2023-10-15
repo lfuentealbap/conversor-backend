@@ -1,0 +1,16 @@
+# Node.js
+node_modules/
+
+# Prisma
+prisma/migrations
+
+# Archivos de entorno
+.env
+
+# Archivos de registro y errores
+logs/
+*.log
+
+# Configuración específica del IDE
+.idea/
+.vscode/
