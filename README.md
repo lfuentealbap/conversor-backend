@@ -22,9 +22,9 @@ Además, necesitarás configurar una base de datos PostgreSQL y actualizar las v
 3. Configurar las variables de entorno, creando un archivo .env en la raíz del proyecto
    El archivo contiene la siguiente estructura:
    
-    DATABASE_URL=postgresql://usuario:contraseña@localhost:5432/nombre_de_la_base_de_datos
-    SECRETO=mi_clave_secreta
-    PORT=nro_puerto_backend
+    - DATABASE_URL=postgresql://usuario:contraseña@localhost:5432/nombre_de_la_base_de_datos
+    - SECRETO=mi_clave_secreta
+    - PORT=nro_puerto_backend
 
 5. Teniendo todo esto listo, ahora hay que crear las tablas de base de datos del proyecto, por esto que prisma nos facilita esta tarea con el siguiente comando:
    ```bash
