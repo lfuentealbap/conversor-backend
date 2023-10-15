@@ -34,13 +34,13 @@ Además, necesitarás configurar una base de datos PostgreSQL y actualizar las v
    ```bash
    npm start
 
-##Uso
+## Uso
 La aplicación proporciona endpoints para registrar usuarios, loguearse, realizar conversiones y obtener el historial de conversiones.
 
-###Endpoints
-POST /api/register: Registra un nuevo usuario.
-POST /api/login: Inicia sesión y devuelve un token JWT.
-POST /api/conversion: Guarda la conversión realizada en el historial.
-GET /api/historial: Obtiene el historial de conversiones.
+### Endpoints
+- POST /api/register: Registra un nuevo usuario.
+- POST /api/login: Inicia sesión y devuelve un token JWT.
+- POST /api/conversion: Guarda la conversión realizada en el historial.
+- GET /api/historial: Obtiene el historial de conversiones.
 
   
