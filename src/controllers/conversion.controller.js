@@ -1,7 +1,7 @@
 const { PrismaClient } = require("@prisma/client");
-
 const prisma = new PrismaClient();
 
+//Registra una conversion y lo almacena en la base de datos
 const guardarConversion = async (req, res) => {
   const {
     usuario,
@@ -31,6 +31,7 @@ const guardarConversion = async (req, res) => {
   }
 };
 
+//Obtiene el historial de conversiones almacenadas en la base de datos
 const historialConversiones = async (req, res) => {
   try {
     const historial = await prisma.historialConversion.findMany({
