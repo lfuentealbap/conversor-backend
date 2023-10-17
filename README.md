@@ -32,7 +32,7 @@ Además, necesitarás configurar una base de datos PostgreSQL y actualizar las v
 
 6. Finalmente, para ejecutar el proyecto, se debe ejecutar el siguiente comando:
    ```bash
-   npm start
+   npm run start
 
 ## Uso
 La aplicación proporciona endpoints para registrar usuarios, loguearse, realizar conversiones y obtener el historial de conversiones.
