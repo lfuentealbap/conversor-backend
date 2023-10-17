@@ -21,6 +21,8 @@ const registarUsuario = async (req, res) => {
   } catch (error) {
     console.error("Error al registrar usuario:", error);
     res.status(500).json({ error: "Error interno del servidor" });
+  }finally{
+    await prisma.$disconnect();
   }
 };
 
@@ -54,7 +56,9 @@ const login = async (req, res) => {
   } catch (error) {
     console.error("Error al iniciar sesión:", error);
     res.status(500).json({ error: "Error interno del servidor" });
+  }finally{
+    await prisma.$disconnect();
   }
 };
 
-module.exports = { registarUsuario, login };
+module.exports = { registarUsuario, login};
